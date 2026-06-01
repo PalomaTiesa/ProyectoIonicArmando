@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>
+      Derian Jimenez
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Esto es lo que tenia antes -->
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">MiApp</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Desarrollo de apps moviles</ion-card-title>
+    <ion-card-subtitle>apps moviles asignatura</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    contenido de la materia.
+  </ion-card-content>
+</ion-card>
+<ion-button color="danger" (click)="saludar()">Te saludo, bro.</ion-button>
+
+<!-- Esto es de la clase de 28 de mayo-->
+<!--Agrega un item-->
+<ion-item>
+  <ion-label position="stacked">Este es un item. Agregar nueva tarea</ion-label>
+  <ion-input [(ngModel)]="newTaskStr" placeholder="Escribe tu tarea"></ion-input>
+</ion-item>
+
+<!-- Aqui con click addTask llamamos a la funcion que esta en home.page.ts-->
+<ion-button color="danger" expand="block" (click)="addTask()">Agregar tarea</ion-button>
+
+<!--Agregar tareas-->
+<ion-list>
+  @for(task of task; track task.id){
+    <ion-item>
+      <ion-label>{{task.titulo}}</ion-label>
+    </ion-item>
+  }
+</ion-list>
+
+<!--Agregar validaciones
+titulo: no vacio
+No duplicados
+sensible a mayusculas y minusculas
+Espacios en blanco antes y despues
+-->
+
+</ion-content>
