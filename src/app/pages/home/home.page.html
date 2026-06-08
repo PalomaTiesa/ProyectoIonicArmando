@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>
+      Task List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-item>    
+        <ion-input type="text" 
+          placeholder="ingresar una nueva tarea..." 
+          name="task" [(ngModel)] ="newTaskStr"/>
+      <ion-button> <ion-icon name="add-outline"></ion-icon></ion-button>
+   
+    </ion-item>
+</ion-content>
